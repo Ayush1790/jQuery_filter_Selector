@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- dropdowns -->
+    <select id="select_os"></select>
+    <select id="select_brand"></select>
+    <br /><br />
+    <!-- display data -->
+    <div class="display">
+      <table class="display__table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Brand</th>
+            <th>Operating System</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody class="table__body"></tbody>
+      </table>
+    </div>
+    <!-- search -->
+    <input type="text" id ="search_data" placeholder="Search with Product Id or Name">
+    <span id="msg"></span>
+  </body>
+  <script src="./JS/products.js"></script>
+</html>

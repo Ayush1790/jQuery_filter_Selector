@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+    justify-content: center;
+    margin: 20px 5px;
+}
+.display__table{
+	padding: 10px;
+	font-size: 15px;
+	border-collapse: collapse;
+	border: 1px solid lawngreen;
+	margin: 5px auto;
+}
+
+.display__table td,th{
+	padding: 10px;
+	border: 1px solid lawngreen;
+	width: 20%;
+}
+.display__table td input{
+	width: 20%;
+	text-align: center;
+	padding: 3px;
+}
+.display{
+    justify-content: center;
+    text-align: center;
+}
