@@ -62,7 +62,7 @@ $("#select_os").on("change", function () {
 	let data = "";
 	products.forEach(element => {
 		if ($(this).val() == element.os && $(this).next().val() == "-Select Brand-")
-			data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=remove(this)>X</td></tr>`;
+			data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=hide(this)>X</td></tr>`;
 	});
 	$(".table__body").html(data);
 	selectBoth();
@@ -73,7 +73,7 @@ $("#select_brand").on("change", function () {
 	let prev = ($(this).prev().val());
 	products.forEach(element => {
 		if ((prev == "-Select Operating System-" && $(this).val() == element.brand)) {
-			data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=remove(this)>X</td></tr>`;
+			data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=hide(this)>X</td></tr>`;
 		}
 	});
 	$(".table__body").html(data);
@@ -85,7 +85,7 @@ function selectBoth() {
 	if (($("#select_os").val() != "-Select Operating System-") && $("#select_brand").val() != "-Select Brand-") {
 		products.forEach(element => {
 			if (($("#select_os").val() == element.os && $("#select_brand").val() == element.brand)) {
-				data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=remove(this)>X</td></tr>`;
+				data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=hide(this)>X</td></tr>`;
 			}
 		});
 		$(".table__body").html(data);
@@ -114,7 +114,7 @@ $("input").keyup(function () {
 	let data = "";
 	products.forEach(element => {
 		if (element.id.includes($(this).val()) || element.name.includes($(this).val())) {
-			data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=remove(this)>X</td></tr>`;
+			data += `<tr><td>${element.id}</td><td>${element.name}</td><td>${element.brand}</td><td>${element.os}</td><td onclick=hide(this)>X</td></tr>`;
 		}
 	});
 	$(".table__body").html(data);
